@@ -1,12 +1,12 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 function App() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div style={{ color: "#fff" }}>내 서랍</div>
-    </div>
+    </ThemeProvider>
   );
 }
 
@@ -18,8 +18,9 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// const Container = styled.div`
-//   background-color: rgb(77, 54, 173);
-// `;
+const theme = {
+  color: {},
+  size: {},
+};
 
 export default App;
